@@ -1,0 +1,26 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "description": "sockets with node",
+  "main": "index.js",
+  "scripts": {
+    "s-deploy": "git add . && git commit -m 'ver0.3' && git push heroku master",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Mohsin Rana",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.25",
+    "query-string": "^8.1.0",
+    "ws": "^8.12.1"
+  }
+}
