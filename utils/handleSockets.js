@@ -10,7 +10,7 @@ const socketServer = () => {
     console.log({ _url });
 
     const djangoSocket = new ws(
-      `ws://192.168.18.68:8000/notification?token=${_url}`
+      `${process.env.DJANGO_SERVER_URL}?token=${_url}`
     );
     djangoSocket.on("message", (data) => {
       socket.send(`${data}`);
