@@ -6,7 +6,7 @@ const socketServer = () => {
   const wsServer = new ws.Server({ noServer: true });
 
   wsServer.on("connection", (socket) => {
-    const djangoSocket = new ws("ws://192.168.18.68:8000/notification");
+    const djangoSocket = new ws( process.env.DJANGO_IP);
 
     djangoSocket.on("message", (data) => {
       socket.send(`From Django-> ${data}`);
